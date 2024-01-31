@@ -11,5 +11,15 @@ using namespace std;
 Не забудьте подключить заголовочный файл cassert.*/
 
 void task3() {
-    
+    float distance, speed;
+    distance = 4546;  
+    speed = -26;  
+
+    cout << "Расстояние: " << distance << " км" << endl;
+    cout << "Скорость: " << speed << " км/ч" << endl;
+
+    assert(speed > 0);
+
+    float time = distance / speed;
+    cout << "Время в пути: " << time << " часов" << endl;
 }
