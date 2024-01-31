@@ -11,5 +11,22 @@ using namespace std;
 Если пользователь введёт некорректный номер квартиры, необходимо сообщить ему об этом.*/
 
 void task1() {
+	string owner[] = { "Достоевский", "Толстой", "Булгаков", "Пушкин", "Тургенев", "Гоголь", "Бунин", "Чехов", "Куприн", "Набоков" };
+	int userInput;
 
+	for (int i = 0; i <= size(owner)-1; ++i) {
+		cout << owner[i] << endl;
+	}
+
+	for (int i = 0; i < 3; ++i) {
+		std::cout << "Введите номер квартиры (1-10): ";
+		cin >> userInput;
+		if (userInput >= 1 && userInput <= 10) {
+			cout << "В квартире " << userInput << " проживает " << owner[userInput - 1] << endl;
+		}
+		else {
+			cout << "Некорректный номер квартиры" << endl;
+		}
+		
+	}
 }
